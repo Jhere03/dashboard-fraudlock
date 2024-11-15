@@ -35,11 +35,16 @@
                     <button type="button" id="clearButton" class="bg-gray-500 text-white p-2 rounded h-10 flex items-center justify-center" style="width: 80px;">
                         <i class="fa fa-refresh" aria-hidden="true"></i>
                     </button>
-
                 </form>
+
+                 <!-- Botón de exportar -->
+                 <button id="exportButton" class="bg-red-500 text-white p-2 rounded h-10 flex items-center hidden">
+    <i class="fa fa-file-pdf-o mr-2" aria-hidden="true"></i> Exportar
+</button>
+
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-11/12 mx-auto p-6 bg-white shadow-lg rounded-lg mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-11/12 mx-auto p-6 rounded-lg mb-6">
                 <!-- Gráfico de Tiempo de Detección -->
                 <div class="p-4 bg-white shadow rounded-lg relative">
                     <h1 class="text-2xl font-bold mb-4 text-center">Tiempo de Detección</h1>
@@ -95,10 +100,13 @@
                 <!-- Script para Chart.js -->
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+                <!-- Script para export.js -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
                 <!-- Scripts personalizados -->
                 <script src="/js/chart.js"></script>
                 <script src="/js/filters.js"></script>
                 <script src="/js/functions.js"></script>
-
+                <script src="/js/export.js"></script>
             </body>
     </html>

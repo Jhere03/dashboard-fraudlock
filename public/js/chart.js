@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 }]
             },
             options: {
-                indexAxis: 'y',
+                indexAxis: 'y', // Barras horizontales
                 scales: {
                     x: {
                         beginAtZero: true
@@ -233,17 +233,19 @@ document.addEventListener('DOMContentLoaded', async function () {
                 },
                 plugins: {
                     legend: {
-                        display: false
+                        display: false // Ocultar la leyenda
                     },
                     datalabels: {
-                        anchor: 'end',
-                        align: 'end',
-                        formatter: (value) => value,
-                        color: '#000',
+                        anchor: 'center', // Coloca el texto en el centro de la barra
+                        align: 'center', // Alinea el texto horizontal y verticalmente
+                        formatter: (value) => value, // Muestra los valores tal cual
+                        color: '#000000', // Cambia el color a blanco para mejor visibilidad dentro de la barra
                         font: {
-                            weight: 'bold'
+                            weight: 'bold',
+                            size: 12 // Tamaño de fuente
                         }
                     }
+                    
                 }
             },
             plugins: [ChartDataLabels]
@@ -255,6 +257,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         console.error("Error al cargar los datos: ", error);
     }
 });
+
 
 
 
